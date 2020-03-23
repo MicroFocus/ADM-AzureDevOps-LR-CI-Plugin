@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
-    "id": "Execute-Micro-Focus-Tests-Demo8",
-    "name": "Micro Focus tests Demo8",
+    "id": "LoadRunner-Tests-Plugin",
+    "name": "LoadRunner tests automation",
     "version": "1.0.0",
     "publisher": "Micro-Focus-LR",
     "targets": [
@@ -9,7 +9,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Micro Focus Plugin. Includes one build/release task.",
+    "description": "LoadRunner tests execution automation plugin. Includes one task: Execute LoadRunner tests. For more details visit [official documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md)",
     "categories": [
         "Azure Pipelines"
     ],

@@ -1,10 +1,10 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "c049b85f-d863-4c25-bdfb-610e166f6f1f",
-    "name": "ExecMicroFocusTestsDemo10",
-    "friendlyName": "Execute Micro Focus tests Demo10",
-    "description": "Execute Micro Focus tests from file system",
-    "helpMarkDown": "",
+    "id": "c9d2a51a-28b3-4019-b37f-fd8afe470e18",
+    "name": "ExecuteLoadRunnerTests",
+    "friendlyName": "Execute LoadRunner tests",
+    "description": "Execute LoadRunner tests from file system",
+    "helpMarkDown": "For more details visit [official documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md)",
     "category": "Utility",
     "author": "MicroFocus",
     "version": {
