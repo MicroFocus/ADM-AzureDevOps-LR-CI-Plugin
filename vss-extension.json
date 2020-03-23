@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "Execute-Micro-Focus-Tests-Demo8",
+    "name": "Micro Focus tests Demo8",
+    "version": "1.0.0",
+    "publisher": "Micro-Focus-LR",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Micro Focus Plugin. Includes one build/release task.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/LoadRunner.png"        
+    },
+    "files": [
+        {
+            "path": "LoadRunnerTask"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "LoadRunnerTask"
+            }
+        }
+    ]
+}

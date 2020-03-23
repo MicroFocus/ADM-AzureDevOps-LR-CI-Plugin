@@ -1,0 +1,14 @@
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\HpToolsLauncherTests.dll
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\HpToolsLauncherTests.pdb
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\HpToolsLauncher.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\mscorlib.dll
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\HpToolsLauncher.pdb
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\normidna.nlp
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\normnfc.nlp
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\normnfd.nlp
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\normnfkc.nlp
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\bin\Release\normnfkd.nlp
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\obj\Release\HpToolsLauncherTests.csprojResolveAssemblyReference.cache
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\obj\Release\HpToolsLauncherTests.dll
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\HpToolsLauncherTests\obj\Release\HpToolsLauncherTests.pdb

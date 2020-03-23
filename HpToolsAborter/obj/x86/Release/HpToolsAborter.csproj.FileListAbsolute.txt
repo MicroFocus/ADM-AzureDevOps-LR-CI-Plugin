@@ -1,0 +1,6 @@
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\HpToolsAborter.exe.config
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\HpToolsAborter.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\HpToolsAborter.pdb
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsAborter\obj\x86\Release\HpToolsAborter.csprojResolveAssemblyReference.cache
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsAborter\obj\x86\Release\HpToolsAborter.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsAborter\obj\x86\Release\HpToolsAborter.pdb

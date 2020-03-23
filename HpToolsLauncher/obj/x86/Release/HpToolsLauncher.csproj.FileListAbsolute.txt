@@ -1,0 +1,8 @@
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\HpToolsLauncher.exe.config
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\HpToolsLauncher.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\HpToolsLauncher.pdb
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\obj\x86\Release\HpToolsLauncher.csprojResolveAssemblyReference.cache
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\obj\x86\Release\HpToolsLauncher.Properties.Resources.resources
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\obj\x86\Release\HpToolsLauncher.csproj.GenerateResource.Cache
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\obj\x86\Release\HpToolsLauncher.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\HpToolsLauncher\obj\x86\Release\HpToolsLauncher.pdb

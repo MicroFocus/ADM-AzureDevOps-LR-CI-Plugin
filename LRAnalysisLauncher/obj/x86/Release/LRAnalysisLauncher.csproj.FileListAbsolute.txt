@@ -1,0 +1,8 @@
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\LRAnalysisLauncher.exe.config
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\LRAnalysisLauncher.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\src\main\resources\LRAnalysisLauncher.pdb
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\LRAnalysisLauncher\obj\x86\Release\LRAnalysisLauncher.csprojResolveAssemblyReference.cache
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\LRAnalysisLauncher\obj\x86\Release\LRAnalysisLauncher.Properties.Resources.resources
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\LRAnalysisLauncher\obj\x86\Release\LRAnalysisLauncher.csproj.GenerateResource.Cache
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\LRAnalysisLauncher\obj\x86\Release\LRAnalysisLauncher.exe
+C:\Users\PTofan\Documents\Releases\6.1\hpe-application-automation-tools-plugin\LRAnalysisLauncher\obj\x86\Release\LRAnalysisLauncher.pdb
