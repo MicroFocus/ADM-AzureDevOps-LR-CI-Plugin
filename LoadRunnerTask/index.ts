@@ -79,12 +79,13 @@ async function execPsCommand(command: string):Promise<string>{
 			var consoleOutput: string = "";
 			child = spawn("powershell.exe",[command]);
 			child.stdout.on("data",function(data: string){
-				console.log(data);
-				consoleOutput += data;
+				console.log(data.toString());
+				consoleOutput += data.toString();
 			});
 			child.stderr.on("data",function(data: string){
-				console.log("Errors: " + data);
-				consoleOutput += "Errors: " + data;
+				const err: string = `Errors: ${data.toString()}`;
+				console.log(err);
+				consoleOutput += err;
 				errorLevel += 1;
 			});
 			child.on("exit",function(){

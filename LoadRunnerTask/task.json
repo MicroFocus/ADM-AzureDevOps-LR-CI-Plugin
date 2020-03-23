@@ -4,7 +4,7 @@
     "name": "ExecuteLoadRunnerTests",
     "friendlyName": "Execute LoadRunner tests",
     "description": "Execute LoadRunner tests from file system",
-    "helpMarkDown": "For more details visit [official documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md)",
+    "helpMarkDown": "Execute LoadRunner tests - Docs",
     "category": "Utility",
     "author": "MicroFocus",
     "version": {
