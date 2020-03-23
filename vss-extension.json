@@ -9,7 +9,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "LoadRunner tests execution automation plugin. Includes one task: Execute LoadRunner tests. For more details visit [official documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md)",
+    "description": "For more details visit [official documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md)",
     "categories": [
         "Azure Pipelines"
     ],
