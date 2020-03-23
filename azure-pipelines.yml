@@ -1,0 +1,97 @@
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting the full .NET Framework.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool: 'Default'
+  #vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Build'
+
+steps:
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+
+- powershell:  
+    $path = "";
+    $initialDirectory = get-location;
+    write-host $initialDirectory;
+    cd C:\Windows\Microsoft.NET;
+    $msBuildExecutables = Get-ChildItem -recurse -filter MSBuild.exe;
+    foreach($elem in $msBuildExecutables){
+        if($elem.FullName -like "*v4.0.30319*"){
+        $path = $elem.FullName;
+        break;
+        }
+    }
+    cd $initialDirectory;
+    $buildableProjects = Get-ChildItem -recurse -filter *.csproj;
+    foreach($elem in $buildableProjects){
+        $project = $elem.FullName;
+        $command = "`"$path`" `"$project`" /p:Configuration=Release";
+        write-host "$command";
+        powershell -command "$command";
+    }
+
+    $extentionTaskPath = Get-ChildItem -recurse -filter *LoadRunnerTask* -Directory;
+    if($extentionTaskPath.Length -eq 1){
+        $extentionTaskPath = $extentionTaskPath[0].FullName;
+        write-host "`nExtension path was found:" $extentionTaskPath;
+    }else{
+        if($extentionTaskPath.Length -eq 0){
+            write-host "Extension Path was not found";
+        }else{
+            write-host "Multiple extension paths were found:";
+            write-host "`$extentionTaskPath";
+        }
+        exit 1;
+    }
+        
+    $executables = Get-ChildItem -recurse -filter *Launcher.exe;
+    $numberOfExeFound = 0;
+    foreach($elem in $executables){
+        if($elem.FullName -like "*obj\x86*"){
+            $elemParentPath = $elem.PSParentPath;
+            write-host "`n";
+            write-host "Copy $elem";
+            write-host "From:" $elemParentPath;
+            write-host "To:" $extentionTaskPath ;
+            Copy-Item -Path $elem.FullName -Destination $extentionTaskPath -Force;
+            $numberOfExeFound += 1;
+        }
+    }
+    if($numberOfExeFound -ne 2){
+        write-host "There was a problem with the number of executables found.";
+        write-host "A check about this is required";
+        exit 2;
+    }
+    cd $extentionTaskPath;
+    npm config set proxy http://web-proxy.il.softwaregrp.net:8080;
+    npm config set http-proxy http://web-proxy.il.softwaregrp.net:8080;
+    npm config set https-proxy http://web-proxy.il.softwaregrp.net:8080;
+    write-host "npm install -g typescript";
+    npm install -g typescript;
+    write-host "npm install azure-pipelines-task-lib --save";
+    npm install azure-pipelines-task-lib --save;
+    write-host "npm install @types/node --save-dev";
+    npm install @types/node --save-dev;
+    write-host "npm install @types/q --save-dev";
+    npm install @types/q --save-dev;
+    Set-Content -Value "node_modules" -Path ".gitignore";
+    write-host "tsc --init";
+    tsc --init;
+    write-host "tsc";
+    tsc;
+    cd ..;
+    tfx extension create --manifest-globs vss-extension.json;
