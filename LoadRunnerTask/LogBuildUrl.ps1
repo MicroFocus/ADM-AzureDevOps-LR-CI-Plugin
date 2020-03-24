@@ -16,6 +16,7 @@ function webApplicationMatch{
     return $False
 }
 
+$buildResultsPath = $buildResultsPath.replace("\\","\");
 $webAppName = "";
 
 if(webApplicationMatch -webAppName "$buildLabel"){

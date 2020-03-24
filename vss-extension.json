@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "LoadRunner-Tests-Plugin-Release",
     "name": "LoadRunner tests automation release",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "publisher": "Micro-Focus-LR",
     "targets": [
         {

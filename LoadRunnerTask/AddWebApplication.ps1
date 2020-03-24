@@ -18,6 +18,32 @@ function webApplicationExists {
 
 }
 
+function getAvailableWebApplicationName {
+    param ( [string]$webApplicationName, [string] $physicalPath )
+    
+    $currentWebApplicationName = "$webApplicationName";
+    $webApplication = Get-WebApplication -Name "$currentWebApplicationName";
+
+    $index = 1;
+
+    while($True){
+        if($webApplication){
+            $currentWebApplicationPath = $webApplication.PhysicalPath;
+
+            if("$currentWebApplicationPath" -ne "$physicalPath"){
+                $currentWebApplicationName = "$webApplicationName-$index";
+                $webApplication = Get-WebApplication -Name "currentWebApplicationName";
+                $index = $index + 1;
+            }else{
+                break;
+            }
+        }else{
+            break;
+        }
+    }
+    return "$currentWebApplicationName";
+}
+
 function addWebApplication {
     param ( [string] $webApplicationName, [string] $resultsDirectory)
     
@@ -68,18 +94,27 @@ $resultsDirectory = $resultsDirectory.replace("\\","\");
 $foundApplication = webApplicationExists -webApplicationName "$webApplicationName";
 $buildResultsPath = "$resultsDirectory\$buildLabel"
 $foundDirectory = Test-Path -Path $buildResultsPath;
-if( -Not $foundApplication -And $foundDirectory){
-    addWebApplication -webApplicationName "$webApplicationName" -resultsDirectory "$buildResultsPath" | Add-Content -Path "$logsPath";
+
+if($foundDirectory){
+    
+    $webApplicationName = getAvailableWebApplicationName -webApplicationName "$webApplicationName" -physicalPath "$buildResultsPath"
+    
+    $foundApplication = webApplicationExists -webApplicationName "$webApplicationName";
+    if(-not $foundApplication){
+        addWebApplication -webApplicationName "$webApplicationName" -resultsDirectory "$buildResultsPath" | Add-Content -Path "$logsPath";
+    }
+
+    enableApplicationBrowsing -webApplicationName "$webApplicationName" | Add-Content -Path "$logsPath";
+
+    $webConfigPath = "$buildResultsPath\web.config";
+    hideFile -path $webConfigPath
+
+    $scenarioPage = "Default Web Site/$webApplicationName/$scenario";
+    addDefaultComponentToPage -page $scenarioPage | Add-Content -Path "$logsPath";
+
+    $scenarioWebConfigPath = "$buildResultsPath\$scenario\web.config";
+    hideFile -path $scenarioWebConfigPath
+    
+}else{
+    Add-Content -Path "$logsPath" -Value "$buildResultsPath was not found!"
 }
-
-enableApplicationBrowsing -webApplicationName "$webApplicationName" | Add-Content -Path "$logsPath";
-
-$webConfigPath = "$buildResultsPath\web.config";
-hideFile -path $webConfigPath
-
-
-$scenarioPage = "Default Web Site/$webApplicationName/$scenario";
-addDefaultComponentToPage -page $scenarioPage | Add-Content -Path "$logsPath";
-
-$scenarioWebConfigPath = "$buildResultsPath\$scenario\web.config";
-hideFile -path $scenarioWebConfigPath
