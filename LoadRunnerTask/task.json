@@ -9,7 +9,7 @@
     "author": "MicroFocus",
     "version": {
         "Major": 1,
-        "Minor": 4,
+        "Minor": 5,
         "Patch": 1
     },
     "instanceNameFormat": "Echo $(samplestring)",

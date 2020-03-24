@@ -32,7 +32,7 @@ function getAvailableWebApplicationName {
 
             if("$currentWebApplicationPath" -ne "$physicalPath"){
                 $currentWebApplicationName = "$webApplicationName-$index";
-                $webApplication = Get-WebApplication -Name "currentWebApplicationName";
+                $webApplication = Get-WebApplication -Name "$currentWebApplicationName";
                 $index = $index + 1;
             }else{
                 break;
