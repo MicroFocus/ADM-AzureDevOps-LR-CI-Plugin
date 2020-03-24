@@ -32,7 +32,8 @@ const scenarioTimeoutTag = new Tag("ScenarioExecutionTimeout", "PerScenarioTimeO
 const analysisTemplateTag = new Tag("AnalysisTemplate", "analysisTemplate", "");
 const displayControllerTag =  new Tag("DisplayController", "displayController", "false");
 const runTypeTag = new Tag("RunType", "runType", "FileSystem");
-const taskTimoutTag = new Tag("TaskTimeout", "fsTimeout", -1);
+const fsTimeoutTag = new Tag("FsTimeout", "fsTimeout", -1); // Jenkins/Bamboo compatibility
+const taskTimoutTag = new Tag("TaskTimeout", "taskTimeout", -1);
 const testResultsReportTag = new Tag("TestResultsReport", "resultsFilename", "Report.xml")
 const treatFailureAsErrorTag = new Tag("TreatFailuresAsErrors", "treatFailuresAsErrors", "true");
 const buildId: string = taskLibrary.getVariable('Build.BuildId').replace(/ /g, "");
@@ -49,11 +50,12 @@ const artifactsLabel: string = 'MFTestsArtifacts'
 let loadRunnerTagList: Array<Tag> = [
 	sourcePathTestsTag, testsResultsPathTag, controllerPollingIntervalTag, 
 	scenarioTimeoutTag, analysisTemplateTag, displayControllerTag,
-	runTypeTag, taskTimoutTag, testResultsReportTag
+	runTypeTag, fsTimeoutTag, testResultsReportTag
 ]
 
 let taskTagList: Array<Tag> = [
-	treatFailureAsErrorTag, buildLabelTag, publishScenarioResultsTag,
+	treatFailureAsErrorTag, buildLabelTag, 
+	taskTimoutTag, publishScenarioResultsTag,
 	publishArtifactsManuallyTag, buildArtifactsDirectoryTag,
 	publishTestReportsManuallyTag, buildTestReportsDirectoryTag
 ]
