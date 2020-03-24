@@ -3,7 +3,8 @@ param (
     [string]$webApplicationName,
     [string]$resultsDirectory,
     [string]$buildLabel,
-    [string]$scenario
+    [string]$scenario,
+    [string]$logsPath
  )
 
 
@@ -15,6 +16,32 @@ function webApplicationExists {
     }
     return $false
 
+}
+
+function getAvailableWebApplicationName {
+    param ( [string]$webApplicationName, [string] $physicalPath )
+    
+    $currentWebApplicationName = "$webApplicationName";
+    $webApplication = Get-WebApplication -Name "$currentWebApplicationName";
+
+    $index = 1;
+
+    while($True){
+        if($webApplication){
+            $currentWebApplicationPath = $webApplication.PhysicalPath;
+
+            if("$currentWebApplicationPath" -ne "$physicalPath"){
+                $currentWebApplicationName = "$webApplicationName-$index";
+                $webApplication = Get-WebApplication -Name "currentWebApplicationName";
+                $index = $index + 1;
+            }else{
+                break;
+            }
+        }else{
+            break;
+        }
+    }
+    return "$currentWebApplicationName";
 }
 
 function addWebApplication {
@@ -43,20 +70,51 @@ function addDefaultComponentToPage {
     }
 }
 
+function hideFile {
+    param ([string] $path )
 
-## ============================================================================================
-## ============================================================================================
-## ============================================================================================
-## ============================================================================================
-
-
-$foundApplication = webApplicationExists -webApplicationName "$webApplicationName"
-$foundDirectory = Test-Path -Path $resultsDirectory
-if( -Not $foundApplication -And $foundDirectory){
-    addWebApplication -webApplicationName "$webApplicationName" -resultsDirectory "$resultsDirectory"
+    if(Test-Path $path){
+    
+        $file = Get-Item "$path" -Force;
+        if($file){
+            if(-not $file.Attributes.HasFlag([System.IO.FileAttributes]::Hidden)){
+                $file.Attributes += 'Hidden';
+            }
+        }
+    }else{
+        Add-Content -Path "$logsPath" -Value "$path not found!"
+    }
 }
+## ============================================================================================
+## ============================================================================================
+## ============================================================================================
+## ============================================================================================
 
-enableApplicationBrowsing -webApplicationName "$webApplicationName"
+$resultsDirectory = $resultsDirectory.replace("\\","\");
+$foundApplication = webApplicationExists -webApplicationName "$webApplicationName";
+$buildResultsPath = "$resultsDirectory\$buildLabel"
+$foundDirectory = Test-Path -Path $buildResultsPath;
 
-$scenarioPage = "Default Web Site/$webApplicationName/$buildLabel/$scenario"
-addDefaultComponentToPage -page $scenarioPage 
+if($foundDirectory){
+    
+    $webApplicationName = getAvailableWebApplicationName -webApplicationName "$webApplicationName" -physicalPath "$buildResultsPath"
+    
+    $foundApplication = webApplicationExists -webApplicationName "$webApplicationName";
+    if(-not $foundApplication){
+        addWebApplication -webApplicationName "$webApplicationName" -resultsDirectory "$buildResultsPath" | Add-Content -Path "$logsPath";
+    }
+
+    enableApplicationBrowsing -webApplicationName "$webApplicationName" | Add-Content -Path "$logsPath";
+
+    $webConfigPath = "$buildResultsPath\web.config";
+    hideFile -path $webConfigPath
+
+    $scenarioPage = "Default Web Site/$webApplicationName/$scenario";
+    addDefaultComponentToPage -page $scenarioPage | Add-Content -Path "$logsPath";
+
+    $scenarioWebConfigPath = "$buildResultsPath\$scenario\web.config";
+    hideFile -path $scenarioWebConfigPath
+    
+}else{
+    Add-Content -Path "$logsPath" -Value "$buildResultsPath was not found!"
+}

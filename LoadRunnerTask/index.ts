@@ -433,8 +433,7 @@ async function publishToArtifacts(artifactsPath:string){
 async function logBuildUrl(testsResultsPath: string, buildLabel: string){
 	
 	const scriptPath:string = path.join(__dirname, "LogBuildUrl.ps1");
-	const buildEndpoint: string = buildLabel.replace(/ /g, "%20");
-	const psCommand = `& "${scriptPath}" -buildEndpoint "${buildEndpoint}"`
+	const psCommand = `& "${scriptPath}" -buildLabel "${buildLabel}" -buildResultsPath "${testsResultsPath}"`
 	await execPsCommand(psCommand);
 }
 
@@ -523,9 +522,8 @@ async function run() {
 			}
 			
 			if(taskParameters[publishScenarioResultsTag.propName] == "true"){
-				await logBuildUrl(testsResultsPath, buildLabel);
+				await logBuildUrl(buildResultsPath, buildLabel);
 			}
-			
 			
 			const publishArtifacts: boolean = taskParameters[publishArtifactsManuallyTag.propName] == 'false'
 

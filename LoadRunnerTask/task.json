@@ -1,16 +1,16 @@
 {
     "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "c9d2a51a-28b3-4019-b37f-fd8afe470e18",
-    "name": "ExecuteLoadRunnerTests",
-    "friendlyName": "Execute LoadRunner tests",
+    "id": "7bbdbdb8-5789-4c62-af90-5153d997fa75",
+    "name": "ExecuteLoadRunnerTestsRelease",
+    "friendlyName": "Execute LoadRunner tests release",
     "description": "Execute LoadRunner tests from file system",
     "helpMarkDown": "Execute LoadRunner tests - Docs",
     "category": "Utility",
     "author": "MicroFocus",
     "version": {
-        "Major": 0,
-        "Minor": 1,
-        "Patch": 0
+        "Major": 1,
+        "Minor": 2,
+        "Patch": 1
     },
     "instanceNameFormat": "Echo $(samplestring)",
     "groups": [
@@ -112,7 +112,7 @@
             "groupName": "handleResultsSettings",
             "visibleRule": "PublishArtifactsManually = true",
             "required": false,
-            "helpMarkDown": "Directory used for build artifacts. The scenario results are stored here."
+            "helpMarkDown": "Directory used for build artifacts. The scenario results are stored here. This directory directory will not be cleaned (all the contained files will be not be deleted)"
         },
         {
             "name": "PublishTestReportsManually",
@@ -131,7 +131,7 @@
             "groupName": "handleResultsSettings",
             "visibleRule": "PublishTestReportsManually = true",
             "required": false,
-            "helpMarkDown": "Directory used for reports. The scenario reports are stored here."
+            "helpMarkDown": "Directory used for reports. The scenario reports are stored here. This directory directory will not be cleaned (all the contained files will be not be deleted)"
         }
     ],
     "execution": {
