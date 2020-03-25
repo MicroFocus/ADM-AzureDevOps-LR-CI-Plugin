@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
-    "id": "LoadRunner-Tests-Plugin-Release",
-    "name": "LoadRunner tests automation release",
-    "version": "1.0.8",
+    "id": "LoadRunnerProfessionalTestsAutomationLastTest",
+    "name": "LoadRunner Professional Tests Automation Last Test",
+    "version": "0.0.0",
     "publisher": "Micro-Focus-LR",
     "targets": [
         {
@@ -21,9 +21,12 @@
             "path": "LoadRunnerTask"
         }
     ],
+    "tags": [
+        "LoadRunner"
+	],
     "contributions": [
         {
-            "id": "custom-build-release-task",
+            "id": "LoadRunnerProfessionalTestsAutomationLastTest",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"

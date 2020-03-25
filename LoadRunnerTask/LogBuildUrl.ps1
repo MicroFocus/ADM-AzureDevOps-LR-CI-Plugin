@@ -42,7 +42,7 @@ if(webApplicationMatch -webAppName "$buildLabel"){
 
 if($webAppName -ne ""){
 
-    $ipAddress = (Invoke-WebRequest -uri "http://ifconfig.me/ip").Content;
+    $ipAddress = (Invoke-WebRequest -uri "http://ifconfig.me/ip" -UseBasicParsing).Content;
     $computer = Get-WmiObject win32_computersystem;
     $hostname = $computer.Name;
     $domain = $computer.Domain;

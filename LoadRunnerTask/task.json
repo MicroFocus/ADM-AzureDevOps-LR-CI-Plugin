@@ -1,18 +1,18 @@
 {
-    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
-    "id": "7bbdbdb8-5789-4c62-af90-5153d997fa75",
-    "name": "ExecuteLoadRunnerTestsRelease",
-    "friendlyName": "Execute LoadRunner tests release",
-    "description": "Execute LoadRunner tests from file system",
-    "helpMarkDown": "Execute LoadRunner tests - Docs",
+    "id": "12b50198-ef35-4fbd-be5c-9e160d2d4fa6",
+    "name": "ExecuteLoadRunnerProfessionalLastTest",
+    "friendlyName": "Execute LoadRunner Professional tests Last Test",
+    "description": "Execute LoadRunner Professional tests from file system Last Test",
+    "helpUrl": "https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md",
+    "helpMarkDown": "Execute LoadRunner Professional tests from file system Last Test",
     "category": "Utility",
-    "author": "MicroFocus",
+    "author": "Micro Focus",
     "version": {
-        "Major": 1,
-        "Minor": 5,
-        "Patch": 1
+        "Major": 0,
+        "Minor": 0,
+        "Patch": 0
     },
-    "instanceNameFormat": "Echo $(samplestring)",
+    "instanceNameFormat": "Execute LoadRunner Professional tests Last Test",
     "groups": [
         {
             "name": "loadRunnerSettings",
