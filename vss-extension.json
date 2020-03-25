@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
-    "id": "LoadRunnerProfessionalTestsAutomationLastTest",
-    "name": "LoadRunner Professional Tests Automation Last Test",
+    "id": "LoadRunnerProfessionalTestsAutomation",
+    "name": "LoadRunner Professional Tests Automation",
     "version": "0.0.0",
     "publisher": "Micro-Focus-LR",
     "targets": [
@@ -9,7 +9,7 @@
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "LoadRunner tests automation - Docs",
+    "description": "Execute LoadRunner Professional tests from file system",
     "categories": [
         "Azure Pipelines"
     ],
@@ -26,7 +26,7 @@
 	],
     "contributions": [
         {
-            "id": "LoadRunnerProfessionalTestsAutomationLastTest",
+            "id": "LoadRunnerProfessionalTestsAutomation",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"

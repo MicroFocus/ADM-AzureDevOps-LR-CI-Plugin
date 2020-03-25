@@ -1,10 +1,10 @@
 {
-    "id": "12b50198-ef35-4fbd-be5c-9e160d2d4fa6",
-    "name": "ExecuteLoadRunnerProfessionalLastTest",
-    "friendlyName": "Execute LoadRunner Professional tests Last Test",
-    "description": "Execute LoadRunner Professional tests from file system Last Test",
+    "id": "765fe9af-ce37-47a0-9b68-737f6a054c68",
+    "name": "ExecuteLoadRunnerProfessional",
+    "friendlyName": "Execute LoadRunner Professional tests",
+    "description": "Execute LoadRunner Professional tests from file system",
     "helpUrl": "https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin/blob/master/README.md",
-    "helpMarkDown": "Execute LoadRunner Professional tests from file system Last Test",
+    "helpMarkDown": "Execute LoadRunner Professional tests from file system",
     "category": "Utility",
     "author": "Micro Focus",
     "version": {
@@ -12,7 +12,7 @@
         "Minor": 0,
         "Patch": 0
     },
-    "instanceNameFormat": "Execute LoadRunner Professional tests Last Test",
+    "instanceNameFormat": "Execute LoadRunner Professional tests",
     "groups": [
         {
             "name": "loadRunnerSettings",
