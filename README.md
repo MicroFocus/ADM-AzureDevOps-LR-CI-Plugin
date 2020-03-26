@@ -15,7 +15,7 @@ This extension enables you to include a LoadRunner Professional test execution a
 For more details about the extension, feel free to see [LoadRunner Professional Tests Automation Documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin).
 
 ## How to use the plugin
-#  Parameters and their usage
+###  Parameters and their usage
 1.	Source path: Path for the test or path for the folder that contains the tests. (required parameter)
 2.	Results directory: The directory where the test results are saved. The default value is C:\LoadRunnerResults.
 3.	Task timeout: Timeout value for the task execution, in minutes. If this is empty, there will be no timeout for the task. Negative values will not produce any effects. The default value is -1.
