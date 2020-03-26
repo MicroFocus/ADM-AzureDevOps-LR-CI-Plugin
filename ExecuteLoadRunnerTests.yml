@@ -10,3 +10,29 @@ steps:
   inputs:
     SourcePath: 'C:\Scenarios'
     TreatFailuresAsErrors: false
+    PublishArtifactsManually: true
+    BuildArtifactsDirectory: 'C:\CustomArtifacts'
+    PublishTestReportsManually: true
+    BuildTestReportsDirectory: 'C:\CustomReports'
+
+- task: ExecuteLoadRunnerProfessional@0
+  inputs:
+    SourcePath: 'C:\Scenarios2'
+    TreatFailuresAsErrors: false
+    PublishArtifactsManually: true
+    BuildArtifactsDirectory: 'C:\CustomArtifacts'
+    PublishTestReportsManually: true
+    BuildTestReportsDirectory: 'C:\CustomReports'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'C:\CustomArtifacts'
+    ArtifactName: 'LR'
+    publishLocation: 'Container'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/*Report*-*.xml'
+    searchFolder: 'C:\CustomReports'
+    mergeTestResults: true
