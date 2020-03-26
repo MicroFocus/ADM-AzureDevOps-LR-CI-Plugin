@@ -9,3 +9,4 @@ steps:
 - task: ExecuteLoadRunnerProfessional@0
   inputs:
     SourcePath: 'C:\Scenarios'
+    TreatFailuresAsErrors: false
