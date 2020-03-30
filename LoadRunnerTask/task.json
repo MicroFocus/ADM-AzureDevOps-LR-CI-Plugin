@@ -1,5 +1,5 @@
 {
-    "id": "765fe9af-ce37-47a0-9b68-737f6a054c68",
+    "id": "f9c6fd68-e0da-43c0-ac91-0cc483015067",
     "name": "ExecuteLoadRunnerProfessional",
     "friendlyName": "Execute LoadRunner Professional tests",
     "description": "Execute LoadRunner Professional tests from file system",
@@ -10,7 +10,7 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 0
+        "Patch": 1
     },
     "instanceNameFormat": "Execute LoadRunner Professional tests",
     "groups": [
