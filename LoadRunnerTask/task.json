@@ -112,7 +112,7 @@
             "groupName": "handleResultsSettings",
             "visibleRule": "PublishArtifactsManually = true",
             "required": false,
-            "helpMarkDown": "Directory used for build artifacts. The scenario results are stored here. This directory directory will not be cleaned (all the contained files will be not be deleted)"
+            "helpMarkDown": "Directory used for build artifacts. The scenario results are stored here. This directory will not be cleaned (all the contained files will be not be deleted)"
         },
         {
             "name": "PublishTestReportsManually",
@@ -131,7 +131,7 @@
             "groupName": "handleResultsSettings",
             "visibleRule": "PublishTestReportsManually = true",
             "required": false,
-            "helpMarkDown": "Directory used for reports. The scenario reports are stored here. This directory directory will not be cleaned (all the contained files will be not be deleted)"
+            "helpMarkDown": "Directory used for reports. The scenario reports are stored here. This directory will not be cleaned (all the contained files will be not be deleted)"
         }
     ],
     "execution": {

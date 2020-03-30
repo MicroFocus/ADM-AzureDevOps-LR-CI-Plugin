@@ -1,15 +1,15 @@
 # LoadRunner Professional Tests Automation
 
-## Environment configuration
-1.	The machine that you are using is configured as an Azure Devops self-hosted agent ([Self-hosted Windows agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops))
-2.	You have to ensure that the user that is being used by the Azure Pipelines Agent service has privileged permissions
-3.	LoadRunner has to be installed on your agent machine
-4.	You have to create your own test scenarios and to ensure that their location is accessible for your agent 
-5.	Internet Information Services (IIS) have to be installed and enabled on your agent
-6.  Powershell 5.0 or higher ([Download and install Windows PowerShell 5.1](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops)https://docs.microsoft.com/en-us/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)
+You can set up Azure DevOps pipelines to work with LoadRunner Professional tests, to integrate load tests into your CI/CD testing process. LoadRunner Professional provides a plugin for the Azure DevOps, enabling the execution of Controller scenarios as part of a build, and to view the results in Azure DevOps reports.
 
-## Integration with LoadRunner Professional
-This extension enables you to include a LoadRunner Professional test execution as a task in a Azure DevOps / Microsoft Team Foundation Server CI build process.
+The following sections describe how to set up the environment to use the LoadRunner Azure plugin.
+
+## Environment configuration
+
+The machine to be used for the job should be configured as an Azure DevOps self-hosted agent (see[Self-hosted Windows agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops))
+LoadRunner Professional installed on the Azure DevOps agent machine
+Create your test scenarios and ensure that their location is accessible by the Azure DevOps agent.
 
 ## Documentation
-For more details about the extension, feel free to see [LoadRunner Professional Tests Automation Documentation](https://github.com/MicroFocus/ADM-AzureDevOps-LR-CI-Plugin).
+
+For more details about the extension, please, check [LoadRunner Professional Help Center](http://adm-lr-staging.s3-website-us-east-1.amazonaws.com/lr/en/latest_staging/help/WebHelp/Content/Controller/Azure_DevOps.htm).

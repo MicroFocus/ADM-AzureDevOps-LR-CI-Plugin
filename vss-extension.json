@@ -2,8 +2,8 @@
     "manifestVersion": 1,
     "id": "LoadRunnerProfessionalTestsAutomation",
     "name": "LoadRunner Professional Tests Automation",
-    "version": "0.0.4",
-    "publisher": "Micro-Focus-LR",
+    "version": "0.0.1",
+    "publisher": "Micro-Focus",
     "public": true,
     "targets": [
         {
@@ -24,11 +24,20 @@
     ],
     "content": {
         "details": {
-            "path": "overview.md"
+          "path": "README.md"
+        },
+        "overview": {
+          "path": "overview.md"
+        },
+        "license": {
+          "path": "LICENSE.md"
         }
-    },
+      },
     "tags": [
-        "LoadRunner"
+        "LoadRunner",
+        "LoadRunner Professional",
+        "Tests utomation",
+        "Continuous Integration"
 	],
     "contributions": [
         {
