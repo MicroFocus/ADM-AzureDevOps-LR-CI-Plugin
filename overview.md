@@ -6,10 +6,10 @@ The following sections describe how to set up the environment to use the LoadRun
 
 ## Environment configuration
 
-The machine to be used for the job should be configured as an Azure DevOps self-hosted agent (see[Self-hosted Windows agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops))
+The machine to be used for the job should be configured as an Azure DevOps self-hosted agent (see [Self-hosted Windows agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops))
 LoadRunner Professional installed on the Azure DevOps agent machine
 Create your test scenarios and ensure that their location is accessible by the Azure DevOps agent.
 
 ## Documentation
 
-For more details about the extension, please, check [LoadRunner Professional Help Center](http://adm-lr-staging.s3-website-us-east-1.amazonaws.com/lr/en/latest_staging/help/WebHelp/Content/Controller/Azure_DevOps.htm).
+For more details about the extension, please, check [LoadRunner Professional Help Center](https://admhelp.microfocus.com/lr/en/latest/help/WebHelp/Content/Controller/Azure_DevOps.htm).
