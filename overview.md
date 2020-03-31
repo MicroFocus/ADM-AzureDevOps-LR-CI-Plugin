@@ -7,7 +7,9 @@ The following sections describe how to set up the environment to use the LoadRun
 ## Environment configuration
 
 The machine to be used for the job should be configured as an Azure DevOps self-hosted agent (see [Self-hosted Windows agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/v2-windows?view=azure-devops))
+
 LoadRunner Professional installed on the Azure DevOps agent machine
+
 Create your test scenarios and ensure that their location is accessible by the Azure DevOps agent.
 
 ## Documentation
