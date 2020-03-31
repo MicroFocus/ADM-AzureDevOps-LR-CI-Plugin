@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "LoadRunnerProfessionalTestsAutomation",
     "name": "LoadRunner Professional Tests Automation",
-    "version": "0.0.4",
+    "version": "0.1.0",
     "publisher": "Micro-Focus",
     "public": true,
     "targets": [
