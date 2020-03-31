@@ -14,4 +14,4 @@ Create your test scenarios and ensure that their location is accessible by the A
 
 ## Documentation
 
-For more details about the extension, please, check [LoadRunner Professional Help Center](https://admhelp.microfocus.com/lr/en/latest/help/WebHelp/Content/Controller/Azure_DevOps.htm).
+For more details about the extension, please check [LoadRunner Professional Help Center](https://admhelp.microfocus.com/lr/en/latest/help/WebHelp/Content/Controller/Azure_DevOps.htm).
